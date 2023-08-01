@@ -16,6 +16,7 @@
     --clr-charcoal: #383F51;
     --clr-jungle-green: #21A366;
     --clr-excel-green: #10793f44;
+    --clr-blue: #3F97DE;
 }
 
 body{
@@ -73,108 +74,114 @@ nav{
     z-index: 10;
 }
 
+/* ######################################################### */
 
-/* #################################################################################### */
-
-.actions-wrapper{
+.file-explorer-wrapper{
+    width: max-content;
     display: block;
-    margin: auto;
-    width: 90%;
+    margin: 3rem auto;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
-
-.actions{
-    width: 100%;
-    /* height: max-content; */
-    /* background-color: red; */
-    margin: 7rem 1.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.card{
-    width: 150px;
-    height: 200px;
-    flex: 1 0 150px;
+.file-explorer{
+    min-width: 40vw;
+    min-height: 70vh;
     background-color: #FFF;
-    padding: 8px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 0 15px 0px #888;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 2rem;
+
 }
 
-.card-img{
-    width: max-content;
-    height: max-content;
-    position: relative;
+.blank-file{
+    /* background-color: green; */
+    flex: 1 20;
+    /* min-height: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.card-img img{
-    width: 100px;
-    /* display: block;
-    margin: auto; */
+.blank-file img{
+    width: 40px;
+    margin-right: 10px;
 }
 
-.img-blur-overlay{
-    width: 40%;
-    height: 40%;
-    background-color: var(--clr-excel-green);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
+.blank-file-icon-text{
+    display: flex;
+    align-items:flex-end;
+    font-size: 1.2rem;
+    /* background-color: red; */
+    /* padding: 10px; */
+}
+
+.blank-file-icon-text span{
+    padding-bottom: 2px;
+    letter-spacing: 3px;
+}
+
+#ccc-hr{
+    background-color: #ccc;
     border: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: grid;
-    place-content: center;
-    color: #fff;
-    font-size: 12px;
+    border-radius: 10px;
+    height: 3px;
 }
 
-
-
-/* .img-blur-overlay ion-icon{
-    font-size: 20px;
-    color: #fff;
-} */
-
-.action-heading h3{
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 10px 0px 1px ;
-    text-align: center;
-}
-
-.action-cta a{
-    color: #fff;
-    min-width: 100px;
+.files{
+    flex: 20 1;
     display: block;
-    margin: 5px auto;
-    background-color: var(--clr-orange-dark);
-    padding: 2px 0;
-    border-radius: 1.5rem;
+    padding: 1.5rem 0 0 0;
+    /* background-color: red; */
+    /* height: 10vh; */
 
 }
 
-.action-cta a ion-icon{
-    font-size: 20px;
-    display: block;
-    margin: 3px auto;
+.file{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    justify-content: flex-end;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px 4px;
+    
 }
 
-footer{
-    background-color: var(--clr-charcoal);
-    height: 19.2vh;
-    display: grid;
-    place-content: center;
+.file-name a{
+    color: #333;
+    text-decoration: none;
+    padding: 8px 2px 8px 20px;
+    transition: all 0.1s;
+}
+
+.file-name a:hover{
+    color: #fff;
+}
+
+
+
+.file-icon ion-icon{
+    color: var(--clr-blue);
     font-size: 1.5rem;
-    font-weight: 200;
-    color: #bbb;
+    margin-left: 10px;
+    /* background-color: red; */
+    
 }
 
+.file:nth-child(odd){
+    background-color: #eee;
+}
+.file:nth-child(even){
+    background-color: #d6d4d427;
+}
+
+.file:nth-child(odd):hover{
+    background-color: var(--clr-blue);
+    color: #FFF;
+}
+
+.file:nth-child(even):hover{
+    background-color: var(--clr-blue);
+    color: #FFF;
+}

@@ -16,6 +16,7 @@
     --clr-charcoal: #383F51;
     --clr-jungle-green: #21A366;
     --clr-excel-green: #10793f44;
+    --clr-blue: #3F97DE;
 }
 
 body{
@@ -73,108 +74,60 @@ nav{
     z-index: 10;
 }
 
-
-/* #################################################################################### */
-
-.actions-wrapper{
-    display: block;
-    margin: auto;
-    width: 90%;
-}
-
-
-.actions{
-    width: 100%;
-    /* height: max-content; */
-    /* background-color: red; */
-    margin: 7rem 1.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.card{
-    width: 150px;
-    height: 200px;
-    flex: 1 0 150px;
-    background-color: #FFF;
-    padding: 8px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 0 15px 0px #888;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 2rem;
-}
-
-.card-img{
+/* ############################################# */
+.import-file-wrapper{
     width: max-content;
     height: max-content;
-    position: relative;
-}
-
-.card-img img{
-    width: 100px;
-    /* display: block;
-    margin: auto; */
-}
-
-.img-blur-overlay{
-    width: 40%;
-    height: 40%;
-    background-color: var(--clr-excel-green);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    border: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: grid;
-    place-content: center;
-    color: #fff;
-    font-size: 12px;
-}
-
-
-
-/* .img-blur-overlay ion-icon{
-    font-size: 20px;
-    color: #fff;
-} */
-
-.action-heading h3{
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 10px 0px 1px ;
-    text-align: center;
-}
-
-.action-cta a{
-    color: #fff;
-    min-width: 100px;
+    background-color: #fff;
     display: block;
-    margin: 5px auto;
-    background-color: var(--clr-orange-dark);
-    padding: 2px 0;
+    margin: 3rem auto;
     border-radius: 1.5rem;
-
+    
 }
 
-.action-cta a ion-icon{
-    font-size: 20px;
-    display: block;
-    margin: 3px auto;
+.import-file{
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
 }
 
-footer{
-    background-color: var(--clr-charcoal);
-    height: 19.2vh;
-    display: grid;
-    place-content: center;
-    font-size: 1.5rem;
-    font-weight: 200;
-    color: #bbb;
+.import-header h2{
+    margin: 0 0 2.5rem 0 ;
 }
 
+.file-import-btn{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.file-import-btn input[type="file"]{
+    font-size: 1.3rem;
+    outline: none;
+    padding: 4px 10px ;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px var(--clr-charcoal);
+    margin-bottom: 6rem;
+}
+
+.file-import-btn input[type="submit"]{
+    font-size: 1.3rem;
+    outline: none;
+    padding: 4px 10px ;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--clr-orange-dark);
+    color: #FFF;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+
+.file-import-btn input[type="submit"]:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px #000;
+}

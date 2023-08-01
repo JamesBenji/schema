@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open file</title>
+    <link rel="stylesheet" href="/actions/actions-css/open-file.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><span>S</span>chema<span id="dot">.</span></div>
+        <div class="nav-icons">
+            <a href="/file-workspace.html" class="icon-link"><ion-icon name="chevron-back" style="font-size: 30px;"></ion-icon>
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="file-explorer-wrapper">
+        <div class="file-explorer">
+
+            <div class="blank-file">
+                <div class="blank-file-icon-text">
+                    <img src="../assets/folder-icon.png" alt=""><span>...</span>
+                </div>
+                <hr id="ccc-hr">
+            </div>
+
+            <div class="files">
+
+                <div class="file">
+                    <div class="file-name"><a href="/actions/file-view/view-file.html">file1.xlsx</a></div>
+                    <div class="file-icon"><ion-icon name="document"></ion-icon></div>
+                </div>     
+                <div class="file">
+                    <div class="file-name"><a href="">file1.xlsx</a></div>
+                    <div class="file-icon"><ion-icon name="document"></ion-icon></div>
+                </div>     
+                <div class="file">
+                    <div class="file-name"><a href="">file1.xlsx</a></div>
+                    <div class="file-icon"><ion-icon name="document"></ion-icon></div>
+                </div>     
+                <div class="file">
+                    <div class="file-name"><a href="">file1.xlsx</a></div>
+                    <div class="file-icon"><ion-icon name="document"></ion-icon></div>
+                </div>     
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const files = Array.from(document.getElementsByClassName('file'));
+        console.log(files)
+        files.forEach(file => {
+            file.addEventListener('mouseenter', (e) => {
+                const icon = file.querySelector('ion-icon')
+                const link = file.querySelector('a');
+                link.style.color = "#fff";
+                icon.style.color = "#fff";
+            });
+            file.addEventListener('mouseleave', (e) => {
+                const icon = file.querySelector('ion-icon')
+                const link = file.querySelector('a');
+                link.style.color = "#333";
+                icon.style.color = "#3F97DE";
+            });
+        });
+    </script>
+</body>
+</html>
